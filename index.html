@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="misPelisSeriesApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Películas y Series</title>
+    <link rel="stylesheet" href="styles/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/css/estilos.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Películas y Series</h1>
+        </header>
+        <nav ng-controller="NavegacionCtrl">
+            <ul class="nav nav-tabs">
+                <li ng-class="{ 'active': rutaEsPeliculas() }">
+                    <a href="#/peliculas">Películas</a>
+                </li>
+                <li ng-class="{ 'active': rutaEsSeries() }">
+                    <a href="#/series">Series</a>
+                </li>
+            </ul>
+        </nav>
+        <section app-view-segment="0"></section>
+    </div>
+
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-route.js"></script>
+    <script src="vendor/angular-route-segment.js"></script>
+    <script src="vendor/angular-locale_es-es.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/PeliculasCtrl.js"></script>
+    <script src="scripts/controllers/SeriesCtrl.js"></script>
+    <script src="scripts/controllers/NavegacionCtrl.js"></script>
+    <script src="scripts/controllers/PeliculasProximamenteCtrl.js"></script>
+    <script src="scripts/controllers/PeliculasDetallesCtrl.js"></script>
+    <script src="scripts/controllers/PeliculasCarteleraCtrl.js"></script>
+    <script src="scripts/services/ApiService.js"></script>
+    <script src="scripts/values/Configuracion.js"></script>
+    <script src="scripts/filters/FechaEstreno.js"></script>
+    <script src="scripts/directives/MediaItem.js"></script>
+    <script src="scripts/directives/Votacion.js"></script>
+    <script src="scripts/directives/Generos.js"></script>
+
+</body>
+</html>
